@@ -2,6 +2,96 @@
 @{
     ViewBag.Title = "VSEPR view";
 }
+    <script src="blob:http://partridgejiang.github.io/b6f773e1-2ba7-4a1c-9acb-c5f1a1afdc42"></script>
 
     <h2>Here will be the VSEPR view of atoms and particles</h2>
 
+    <fieldset id="stage3D">
+        <legend>3D</legend>
+        <select id="listMol3D">
+        <option value="methane3D">methane</option>
+        <option value="cyclohexane3D">cyclohexane</option>
+        <option value="aspirin3D">aspirin</option>
+        <option value="ddt3D">ddt</option>
+        <option value="caffeine3D">caffeine</option>
+        <option value="morphine3D">morphine</option>
+        <option value="oxylate3D">oxylate</option>
+        <option value="cyclodextrin3D">cyclodextrin</option>
+        </select>
+        <div id="chemViewer3D" data-widget="Kekule.ChemWidget.Viewer3D" data-enable-toolbar="true" data-auto-size="false" data-padding="20" data-chem-obj="url(#methane3D)" class=" K-Widget K-Chem-Viewer K-Chem-Viewer3D K-NonSelectable K-Layout-H K-State-Normal">
+            <div class=" K-Dynamic-Created K-Chem-Displayer-DrawContext-Parent K-Corner-All" style="width: 100%; height: 398px;">
+                <canvas width="498" height="398"></canvas>
+            </div>
+            <span class=" K-Widget K-Normal-Background K-Container K-Toolbar K-Button-Group K-NonSelectable K-Corner-All K-No-Wrap K-Layout-H K-Dynamic-Created K-Text-Hide K-Glyph-Show K-Chem-InnerToolbar K-Chem-Viewer-Embedded-Toolbar K-State-Normal" style="right: 10px; bottom: 10px; display: none;">
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-First-Child K-Layout-H K-Chem-LoadData K-State-Normal K-Corner-Leading" title="Load data">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Load...</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-SaveFile K-State-Normal" title="Save to file">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Save...</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-Compact-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-MolDisplayBallStick K-State-Normal" title="Change molecule display style"><span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                        <span class=" K-Content K-Text-Content K-Dynamic-Created">Ball Stick</span>
+                        <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                        <span class="K-Compact-Mark"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-MolHideHydrogens K-State-Normal" title="Show/hide hydrogen atoms in model">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Show/hide hydrogens</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-ZoomIn K-State-Normal" title="Zoom in">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span><span class=" K-Content K-Text-Content K-Dynamic-Created">Zoom In</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-ZoomOut K-State-Normal" title="Zoom out">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Zoom Out</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-RotateX K-State-Normal" title="Rotate around X axis">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">X Rotate</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-RotateY K-State-Normal" title="Rotate around Y axis">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span><span class=" K-Content K-Text-Content K-Dynamic-Created">Y Rotate</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-RotateZ K-State-Normal" title="Rotate around Z axis">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Z Rotate</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-RotateLeft K-State-Disabled" title="Rotate in anticlockwise direction" style="display: none;" disabled="true">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Left Rotate</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-RotateRight K-State-Disabled" title="Rotate in clockwise direction" style="display: none;" disabled="true">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span><span class=" K-Content K-Text-Content K-Dynamic-Created">Right Rotate</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-Reset K-Last-Child K-State-Normal K-Corner-Tailing" title="Reset zoom and rotation">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Reset</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+                <button type="button" class=" K-Widget K-Button K-NonSelectable K-No-Wrap K-Text-Hide K-Glyph-Show K-Layout-H K-Chem-Viewer-Edit K-State-Disabled" title="Open an editor to modify displayed object" style="display: none;" disabled="true">
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Pri-Glyph-Content"></span>
+                    <span class=" K-Content K-Text-Content K-Dynamic-Created">Edit...</span>
+                    <span class=" K-Content K-Glyph-Content K-Dynamic-Created K-Assoc-Glyph-Content"></span>
+                </button>
+            </span>
+        </div>
+    </fieldset>
+
+    <script src="kekule.min.js"></script>
+    <script src="kekule.js?module=chemWidget,algorithm"></script>
+    <link rel="stylesheet" type="text/css" href="themes/default/kekule.css" />
+    <script src="raphael.min.js"></script>
+    <script src="Three.js"></script>
+    <script src="kekule.js?module=chemWidget"></script>
