@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Molecule in Chem Viewer Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="/css/kekule.css" />
+  <link rel="stylesheet" type="text/css" href="/css/kekule.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
   <style>
     #listMol2D, #listMol3D
     {
@@ -164,6 +165,11 @@
   </script>
 </head>
 <body onload="init()">
+  <div class="topnav">
+    <a href="/periodicTable.html">Periodic Table</a>
+    <a href="/reactionExercise.html">Reaction Exercise</a>
+    <a class="active" href="/moleculeViewer.html">2D and 3D molecule view</a>
+  </div>
   <div class="Intro">
     <h2>Displaying 2D or 3D Molecules in Chem Viewer</h2>
     Select molecule in the drop-down list, or load local files by the "Load Data" button in viewer.
@@ -182,38 +188,5 @@
          data-widget="Kekule.ChemWidget.Viewer3D" data-enable-toolbar="true" data-auto-size="false" data-padding="20"
          data-chem-obj="url(#methane3D)"></div>
   </fieldset>
-
-  <div class="Intro">
-    <h2>Extraordinary Molecules</h2>
-    <p>
-      Multicenter bond and bond-bond connection are all supported in Kekule.js,
-      extraordinary molecule such as Zeise's salt (bond between bond and atom)
-      and diborane (bond between three atoms) can be displayed with chem viewer:
-    </p>
-    <div>
-      <span class="ExtraMol" data-widget="Kekule.ChemWidget.Viewer2D" style="margin:0 10em"
-            data-chem-obj="url(#zeiseSalt)" data-predefined-setting="basic" data-auto-size="false"></span>
-      <span class="ExtraMol" data-widget="Kekule.ChemWidget.Viewer2D" style="margin:0 10em"
-            data-chem-obj="url(#diborane)" data-predefined-setting="basic" data-auto-size="false"></span>
-    </div>
-    <p>
-      Note that currently the viewer draws multicenter bond by simply connecting all centers.
-      This should be improved in the future.
-    </p>
-  </div>
-
-  <div class="Intro">
-    <h2>Change Chem Viewer UI</h2>
-    <p>
-      Aside from providing a independent UI, chem viewer can also be embedded in normal HTML content, either inline: <span style="vertical-align:middle" data-widget="Kekule.ChemWidget.Viewer2D" data-chem-obj="url(#pyrrole)" data-predefined-setting="basic" data-auto-size="true" data-zoom="0.5"></span>
-      or in a separate line:
-      <span style="display:block" data-widget="Kekule.ChemWidget.Viewer2D"
-            data-chem-obj="url(#benzene)" data-predefined-setting="basic" data-auto-size="true"></span>
-      tool buttons can also be hidden:
-      <span style="vertical-align: middle" data-widget="Kekule.ChemWidget.Viewer2D"
-            data-chem-obj="url(#caffeine)" data-predefined-setting="static" data-auto-size="true"></span>
-    </p>
-
-  </div>
 </body>
 </html>
