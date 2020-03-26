@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Molecule in Chem Viewer Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/css/kekule.css" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <style>
+    
+  </style>
+
+  <script src="/js/raphael-min.2.0.1.js"></script>
+  <script src="/js/Three.js"></script>
+	<script src="/js/kekule.js?modules=chemWidget"></script>
+
+  <script class="Mol2D" id="benzene" type="chemical/x-kekule-json" src="json/molecules/benzene.json"></script>
+  <script class="Mol2D" id="pyrrole" type="chemical/x-kekule-json" src="json/molecules/pyrrole.json"></script>
+  <script class="Mol2D" id="furan" type="chemical/x-kekule-json" src="json/molecules/furan.json"></script>
+  <script class="Mol2D" id="caffeine" type="chemical/x-kekule-json" src="json/molecules/caffeine.json"></script>
+  <script class="Mol2D" id="mannitol" type="chemical/x-kekule-json" src="json/molecules/mannitol.json"></script>
+  <script class="Mol2D" id="morphine" type="chemical/x-kekule-json" src="json/molecules/morphine.json"></script>
+  <script class="Mol3D" id="methane3D" type="chemical/x-kekule-json" src="json/molecules/methane3D.json"></script>
+  <script class="Mol3D" id="cyclohexane3D" type="chemical/x-kekule-json" src="json/molecules/cyclohexane3D.json"></script>
+  <script class="Mol3D" id="aspirin3D" type="chemical/x-kekule-json" src="json/molecules/aspirin3D.json">  </script>
+  <script class="Mol3D" id="ddt3D" type="chemical/x-kekule-json" src="json/molecules/ddt3D.json"></script>
+  <script class="Mol3D" id="caffeine3D" type="chemical/x-kekule-json" src="json/molecules/caffeine3D.json"></script>
+  <script class="Mol3D" id="morphine3D" type="chemical/x-kekule-json" src="json/molecules/morphine3D.json"></script>
+  <script class="Mol3D" id="oxylate3D" type="chemical/x-kekule-json" src="json/molecules/oxylate3D.json"></script>
+  <script class="Mol3D" id="cyclodextrin3D" type="chemical/x-kekule-json" src="json/molecules/cyclodextrin3D.json"></script>
+  <script class="Mol2D" id="zeiseSalt" type="chemical/x-kekule-json" src="json/molecules/zeiseSalt.json"></script>
+  <script class="Mol2D" id="diborane" type="chemical/x-kekule-json" src="json/molecules//diborane.json"></script>
+
+  <script src="js/molecules/init.js"></script>
+</head>
+<body onload="init()">
+  <div class="topnav">
+    <a href="/periodicTable.html">Periodic Table</a>
+    <a href="/reactionExercise.html">Reaction Exercise</a>
+    <a class="active" href="/periodicTable.html">2D and 3D molecule view</a>
+  </div>
+  <div class="Intro">
+    <h2>Displaying 2D or 3D Molecules in Chem Viewer</h2>
+    Select molecule in the drop-down list, or load local files by the "Load Data" button in viewer.
+  </div>
+  <fieldset id="stage2D">
+    <legend>2D</legend>
+    <select id="listMol2D"></select>
+    <div id="chemViewer2D"
+         data-widget="Kekule.ChemWidget.Viewer2D" data-enable-toolbar="true" data-auto-size="false" data-padding="20"
+         data-chem-obj="url(#benzene)"></div>
+  </fieldset>
+  <fieldset id="stage3D">
+    <legend>3D</legend>
+    <select id="listMol3D"></select>
+    <div id="chemViewer3D"
+         data-widget="Kekule.ChemWidget.Viewer3D" data-enable-toolbar="true" data-auto-size="false" data-padding="20"
+         data-chem-obj="url(#methane3D)"></div>
+  </fieldset>
+</body>
+</html>
