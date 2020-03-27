@@ -2,19 +2,21 @@
 # Chemistry
 
 ## Chemistry
-This project blah blah blah
+This project is a Educational project that learns Chemisrty!
 
 ## blah
-blah blah blah
+So far it has 3 sections. Responsive periodic table, Excersises and 2D-3D molecule view
 
 ## Code style
-I try to write "Clean Code", but it's not as I would like to be.
-MVC και τα μυαλα στα καγκελα
+I try to write "Clean Code". I am writing the classic vanilla javascript with the most
+common file organization
+
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/ManosTheMaster/ChemistryProject)
 
 ## Tech/framework used
 Ex. Every Browser you prefer
+(please don't use IE)
 
 <b>Built with</b>
 - [VScode](https://code.visualstudio.com/)
@@ -23,7 +25,8 @@ Ex. Every Browser you prefer
 
 ## How Chemistry Project works
 
-blah blah blah
+Press login, it's there only for the decoration. You won't need to create account don't worry :-)
+Thanks to Kekule.js free library
 ```
 
 ## Developers
