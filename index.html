@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>Molecule in Chem Viewer Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="/css/kekule.css" />
-	<link rel="stylesheet" type="text/css" href="/css/style.css" />
-  <style>
-    
-  </style>
+<html lang="en">
 
-  <script src="/js/raphael-min.2.0.1.js"></script>
-  <script src="/js/Three.js"></script>
-	<script src="/js/kekule.js?modules=chemWidget"></script>
+  <head>
 
-  <script class="Mol2D" id="benzene" type="chemical/x-kekule-json" src="json/molecules/benzene.json"></script>
-  <script class="Mol2D" id="pyrrole" type="chemical/x-kekule-json" src="json/molecules/pyrrole.json"></script>
-  <script class="Mol2D" id="furan" type="chemical/x-kekule-json" src="json/molecules/furan.json"></script>
-  <script class="Mol2D" id="caffeine" type="chemical/x-kekule-json" src="json/molecules/caffeine.json"></script>
-  <script class="Mol2D" id="mannitol" type="chemical/x-kekule-json" src="json/molecules/mannitol.json"></script>
-  <script class="Mol2D" id="morphine" type="chemical/x-kekule-json" src="json/molecules/morphine.json"></script>
-  <script class="Mol3D" id="methane3D" type="chemical/x-kekule-json" src="json/molecules/methane3D.json"></script>
-  <script class="Mol3D" id="cyclohexane3D" type="chemical/x-kekule-json" src="json/molecules/cyclohexane3D.json"></script>
-  <script class="Mol3D" id="aspirin3D" type="chemical/x-kekule-json" src="json/molecules/aspirin3D.json">  </script>
-  <script class="Mol3D" id="ddt3D" type="chemical/x-kekule-json" src="json/molecules/ddt3D.json"></script>
-  <script class="Mol3D" id="caffeine3D" type="chemical/x-kekule-json" src="json/molecules/caffeine3D.json"></script>
-  <script class="Mol3D" id="morphine3D" type="chemical/x-kekule-json" src="json/molecules/morphine3D.json"></script>
-  <script class="Mol3D" id="oxylate3D" type="chemical/x-kekule-json" src="json/molecules/oxylate3D.json"></script>
-  <script class="Mol3D" id="cyclodextrin3D" type="chemical/x-kekule-json" src="json/molecules/cyclodextrin3D.json"></script>
-  <script class="Mol2D" id="zeiseSalt" type="chemical/x-kekule-json" src="json/molecules/zeiseSalt.json"></script>
-  <script class="Mol2D" id="diborane" type="chemical/x-kekule-json" src="json/molecules//diborane.json"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <script src="js/molecules/init.js"></script>
-</head>
-<body onload="init()">
-  <div class="topnav">
-    <a href="/periodicTable.html">Periodic Table</a>
-    <a href="/reactionExercise.html">Reaction Exercise</a>
-    <a class="active" href="/periodicTable.html">2D and 3D molecule view</a>
-  </div>
-  <div class="Intro">
-    <h2>Displaying 2D or 3D Molecules in Chem Viewer</h2>
-    Select molecule in the drop-down list, or load local files by the "Load Data" button in viewer.
-  </div>
-  <fieldset id="stage2D">
-    <legend>2D</legend>
-    <select id="listMol2D"></select>
-    <div id="chemViewer2D"
-         data-widget="Kekule.ChemWidget.Viewer2D" data-enable-toolbar="true" data-auto-size="false" data-padding="20"
-         data-chem-obj="url(#benzene)"></div>
-  </fieldset>
-  <fieldset id="stage3D">
-    <legend>3D</legend>
-    <select id="listMol3D"></select>
-    <div id="chemViewer3D"
-         data-widget="Kekule.ChemWidget.Viewer3D" data-enable-toolbar="true" data-auto-size="false" data-padding="20"
-         data-chem-obj="url(#methane3D)"></div>
-  </fieldset>
-</body>
+    <title>SB Admin - Login</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+  </head>
+
+  <body class="bg-dark">
+
+    <div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <form>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+                <label for="inputEmail">Email address</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                <label for="inputPassword">Password</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me">
+                  Remember Password
+                </label>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block" href="periodicTable.html">Login</a>
+          </form>
+          <div class="text-center">
+            <a class="d-block small mt-3" href="register.html">Register an Account</a>
+            <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  </body>
+
 </html>

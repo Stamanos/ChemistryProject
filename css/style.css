@@ -22,6 +22,11 @@
     color: white;
   }
 
+#periοdicTable, #chemExcersiseBorder{
+  max-width: 99%;
+  overflow: scroll;
+}
+
   #listMol2D, #listMol3D
     {
       display: block;
@@ -29,6 +34,8 @@
     #stage2D, #stage3D
     {
       float: left;
+      max-width: 99%;
+      overflow: scroll;
     }
     #chemViewer2D, #chemViewer3D
     {
