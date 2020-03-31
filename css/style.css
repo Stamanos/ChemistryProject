@@ -23,8 +23,8 @@
   }
 
 #periοdicTable, #chemExcersiseBorder{
-  max-width: 99%;
-  overflow: scroll;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
   #listMol2D, #listMol3D
@@ -34,8 +34,8 @@
     #stage2D, #stage3D
     {
       float: left;
-      max-width: 99%;
-      overflow: scroll;
+      max-width: 100%;
+      overflow-x: scroll;
     }
     #chemViewer2D, #chemViewer3D
     {

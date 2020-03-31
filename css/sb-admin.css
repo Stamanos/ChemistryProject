@@ -28,21 +28,12 @@ body {
 
 body.fixed-nav #content-wrapper {
   margin-top: 56px;
-  padding-left: 90px;
 }
 
 body.fixed-nav.sidebar-toggled #content-wrapper {
   padding-left: 0;
 }
 
-@media (min-width: 768px) {
-  body.fixed-nav #content-wrapper {
-    padding-left: 225px;
-  }
-  body.fixed-nav.sidebar-toggled #content-wrapper {
-    padding-left: 90px;
-  }
-}
 
 .scroll-to-top {
   position: fixed;
