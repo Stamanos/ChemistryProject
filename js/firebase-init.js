@@ -1,5 +1,4 @@
 
-
 var firebaseConfig = {
     apiKey: "AIzaSyAtxRJRi9OHpkj3eUyHQ3omiXq_OFZ4mZY",
     authDomain: "chemistry-70b53.firebaseapp.com",
@@ -15,15 +14,28 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const auth = firebase.auth();
+const db = firebase.firestore();
 
 function register(){
-    var email = document.getElementById("inputEmail");
-    var password = document.getElementById("inputPassword");
+    //get user info
+    
+    const dispayName = document.getElementById('firstName').value + " " + document.getElementById('lastName').value;
+    const email = document.getElementById('inputEmail').value;
+    const password = document.getElementById('inputPassword').value;
 
-    const promise = auth.createUserWithEmailAndPassword(email.nodeValue, password.value);
-    promise.catch(e => alert(e.message));
+    //register user
+    auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        console.log(cred);
+    })
+};
+// function register(){
+//     var email = document.getElementById("inputEmail");
+//     var password = document.getElementById("inputPassword");
 
-    alert("registered");
-}
+//     const promise = auth.createUserWithEmailAndPassword(email.nodeValue, password.value);
+//     promise.catch(e => alert(e.message));
+
+//     alert("registered");
+// }
 
 
