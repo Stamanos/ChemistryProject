@@ -18,17 +18,35 @@
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet"> 
 
-  </head>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  
+  <script src="./js/firebase-init.js"></script>
+  <script src="./js/login.js"></script>
+</head>
 
   <body class="bg-dark">
 
-    <div class="container">
-      <div class="card card-login mx-auto mt-5">
+     <h1>Welcome to Educational Chemisrty Project</h1>
+
+    <div class="container"> <!-- id="firebaseui-auth-container" -->
+      <div class="card card-login mx-auto mt-5" id="loader">
         <div class="card-header">Login</div>
         <div class="card-body">
-          <form>
+          <form id="signup-form">
             <div class="form-group">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
@@ -49,11 +67,11 @@
                 </label>
               </div>
             </div>
-            <a class="btn btn-primary btn-block" href="periodicTable.html">Login</a>
+            <a class="btn btn-primary btn-block" onclick="login()">Login</a>
           </form>
           <div class="text-center">
-            <a class="d-block small mt-3" href="register.html">Register an Account</a>
-            <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+            <a class="d-block small mt-3" href="/register.html">Register an Account</a>
+            <a class="d-block small" href="/forgot-password.html">Forgot Password?</a>
           </div>
         </div>
       </div>
@@ -65,7 +83,6 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
   </body>
 
 </html>
