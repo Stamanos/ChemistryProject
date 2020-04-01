@@ -16,26 +16,69 @@ firebase.analytics();
 const auth = firebase.auth();
 const db = firebase.firestore();
 
+//get data
+// db.collection('users').get().then(snapshots => {
+//     setupUsers(snapshots.docs);
+// })
+
+//listen of auth status changes
+auth.onAuthStateChanged(user => {
+    if(user){
+        console.log('user logged in');
+    }else{
+        console.log('user logged out');
+        document.getElementById('page-top').style.display = 'none';
+    }
+});
+
+
+
 function register(){
     //get user info
     
-    const dispayName = document.getElementById('firstName').value + " " + document.getElementById('lastName').value;
-    const email = document.getElementById('inputEmail').value;
-    const password = document.getElementById('inputPassword').value;
+    const givenName = document.getElementById('firstName').value;
+    const givenSurname = document.getElementById('lastName').value;
+    const givenEmail = document.getElementById('inputEmail').value;
+    const givenPassword = document.getElementById('inputPassword').value;
+    const confirmedPassword = document.getElementById('confirmPassword').value;
+    //First checking the passwords
+    if(confirmedPassword == givenPassword){
+        //register user
+        auth.createUserWithEmailAndPassword(givenEmail, givenPassword).then(() => {
+            document.querySelector('#register-form').reset();
+            //write data to db
+            db.collection('users').add({
+                eduLevel: 0,
+                email: givenEmail,
+                name: givenName,
+                surname: givenSurname
+                //ToDo: chemLevel
+            });
+            //go to login page
+            window.location.href = "index.html";
+        });
+        auth.createUserWithEmailAndPassword(email, password).catch(e => alert(e));
+    }else{
+        alert('Passwords do not much, FOCUS!');
+    }
 
-    //register user
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred);
-    })
 };
-// function register(){
-//     var email = document.getElementById("inputEmail");
-//     var password = document.getElementById("inputPassword");
 
-//     const promise = auth.createUserWithEmailAndPassword(email.nodeValue, password.value);
-//     promise.catch(e => alert(e.message));
+//logout
+function logout(){
+    auth.signOut();
+    window.location.href = "/index.html";
+}
 
-//     alert("registered");
-// }
+//login
+function login(){
+    //get the users info
+    const givenEmail = document.getElementById('inputEmail').value;
+    const givenPassword = document.getElementById('inputPassword').value;
 
-
+    auth.signInWithEmailAndPassword(givenEmail, givenPassword).then((cred) => {
+        document.querySelector('#signup-form').reset();
+        window.location.href = "periodicTable.html"
+    });
+    auth.signInWithEmailAndPassword(givenEmail, givenPassword).catch(e => alert(e));
+}
