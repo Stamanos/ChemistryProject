@@ -25,6 +25,7 @@ const db = firebase.firestore();
 auth.onAuthStateChanged(user => {
     if(user){
         console.log('user logged in');
+        window.location.href = 'periodicTable.html';
     }else{
         console.log('user logged out');
         document.getElementById('page-top').style.display = 'none';
@@ -32,10 +33,8 @@ auth.onAuthStateChanged(user => {
 });
 
 
-
 function register(){
     //get user info
-    
     const givenName = document.getElementById('firstName').value;
     const givenSurname = document.getElementById('lastName').value;
     const givenEmail = document.getElementById('inputEmail').value;
@@ -54,20 +53,16 @@ function register(){
                 surname: givenSurname
                 //ToDo: chemLevel
             });
-            //go to login page
-            window.location.href = "index.html";
-        });
-        auth.createUserWithEmailAndPassword(email, password).catch(e => alert(e));
+        }).catch(e => alert(e));
     }else{
-        alert('Passwords do not much, FOCUS!');
+        alert('Passwords do not match, FOCUS!');
     }
-
 };
 
 //logout
 function logout(){
     auth.signOut();
-    window.location.href = "/index.html";
+    window.location.href = 'index.html';
 }
 
 //login
@@ -76,9 +71,10 @@ function login(){
     const givenEmail = document.getElementById('inputEmail').value;
     const givenPassword = document.getElementById('inputPassword').value;
 
-    auth.signInWithEmailAndPassword(givenEmail, givenPassword).then((cred) => {
+    auth.signInWithEmailAndPassword(givenEmail, givenPassword).then(() => {
         document.querySelector('#signup-form').reset();
-        window.location.href = "periodicTable.html"
+        window.location.href = 'periodicTable.html'
     });
     auth.signInWithEmailAndPassword(givenEmail, givenPassword).catch(e => alert(e));
+
 }
