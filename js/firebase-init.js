@@ -25,7 +25,7 @@ const db = firebase.firestore();
 auth.onAuthStateChanged(user => {
     if(user){
         console.log('user logged in');
-        window.location.href = 'periodicTable.html';
+        //window.location.href = "periodicTable.html"; //ToDo: fix this shit
     }else{
         console.log('user logged out');
         document.getElementById('page-top').style.display = 'none';
@@ -45,6 +45,8 @@ function register(){
         //register user
         auth.createUserWithEmailAndPassword(givenEmail, givenPassword).then(() => {
             document.querySelector('#register-form').reset();
+            //if you delete the line below asyncronous data connection will work
+            window.location.href = "periodicTable.html";
             //write data to db
             db.collection('users').add({
                 eduLevel: 0,
@@ -73,7 +75,7 @@ function login(){
 
     auth.signInWithEmailAndPassword(givenEmail, givenPassword).then(() => {
         document.querySelector('#signup-form').reset();
-        window.location.href = 'periodicTable.html'
+        window.location.href = 'periodicTable.html';
     });
     auth.signInWithEmailAndPassword(givenEmail, givenPassword).catch(e => alert(e));
 
