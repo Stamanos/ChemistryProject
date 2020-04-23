@@ -35,7 +35,7 @@
     {
       float: left;
       max-width: 100%;
-      overflow-x: scroll;
+      overflow-x: auto;
     }
     #chemViewer2D, #chemViewer3D
     {
