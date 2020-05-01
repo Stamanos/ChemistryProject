@@ -214,7 +214,7 @@
 }
 .K-Chem-Viewer .K-Chem-InnerToolbar.K-Chem-Viewer-Embedded-Toolbar
 {
-    position: absolute;
+    position: inherit;
 }
 
 .K-Chem-Viewer .K-Chem-Viewer-Caption
