@@ -47,6 +47,29 @@
         height: 500px;
         float: left;
       }
+      .collapsible 
+      {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .collapsible:hover {
+      background-color: #555;
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
     </style>
   
     <script id="molSrc" type="chemical/x-kekule-json">
@@ -209,6 +232,12 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
+          <a class="nav-link" href="periodicTable.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="moleculeViewer.html">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>2D & 3D</span></a>
@@ -243,7 +272,47 @@
           </ol>
 
           <p>Now you can try your Chemistry skills and create a molecule of your own.</p>
-        
+          
+          <p>Molcules memorandum</p>
+          <table>
+            <tr>
+              <th>Molecule</th>
+              <th>Color</th>
+            </tr>
+            <tr>
+              <td>Hydrogen</td>
+              <td style="background-color:#ffffff">White</td>
+            </tr>
+            <tr>
+              <td>Oxygen</td>
+              <td style="background-color:#ff0606">Red</td>
+            </tr>
+            <tr>
+              <td>Chlorine</td>
+              <td style="background-color:#00b81f">Green</td>
+            </tr>
+            <tr>
+              <td>Nitrogen</td>
+              <td style="background-color:#0052a3">Blue</td>
+            </tr>
+            <tr>
+              <td>Carbon</td>
+              <td style="background-color:#5f6163">Grey</td>
+            </tr>
+            <tr>
+              <td>Sulphur</td>
+              <td style="background-color:#e5ff00">Yellow</td>
+            </tr>
+            <tr>
+              <td>Phosphorus</td>
+              <td style="background-color:#ff6207">Orange</td>
+            </tr>
+            <tr>
+              <td>Other</td>
+              <td style="background-color:#be108a">mostly Dark Red/Pink/Maroon</td>
+            </tr>
+          </table>
+                            
           <div id="state"></div>
           <div id="composer" data-widget="Kekule.Editor.Composer" data-chem-obj="url(#molSrc)" data-predefined-setting="molOnly"></div>
           <div id="chemViewer" data-widget="Kekule.ChemWidget.Viewer3D" data-predefined-setting="fullFunc" data-toolbar-evoke-modes="[0]"
